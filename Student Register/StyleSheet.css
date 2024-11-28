@@ -1,0 +1,146 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: serif;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url(banner.png);
+	background-size: cover;	
+}
+.Container{
+	max-width: 750px;
+	max-height: 510px;
+	padding: 10px;
+	margin: 0 28px;
+	border-radius: 10px;
+	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);	
+}
+h2{
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	padding-bottom: 8px;
+	border-bottom: 1px solid silver; 
+}
+.content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 10px 0; 
+}
+.input-box{
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	padding-bottom: 3px;
+}
+.input-box:nth-child(2n){
+	justify-content: end;
+}
+.input-box label{
+	font-size: 16px;
+	width: 95%;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: 5px 0;
+}
+.input-box input{
+	font-size: 16px;
+	height: 30px;
+	width: 95%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+.input-box input:is(:focus,:valid){
+	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.grade-select-dropdown{
+	cursor: pointer;
+	font-size: 16px;
+	width: 60%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline: none;
+	margin-top: 8px;
+	padding: 4px
+}
+.grade-select-label{
+	font-size: 16px;
+	width: 95%;
+	color: #FFFFFF;
+	font-weight: bold; 
+	margin-top: 8px;
+	padding: 2px;
+}
+.checkbox{
+	margin: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.checkbox label{
+  cursor: pointer;
+  font-size: 15px;
+  font-style: italic;
+  color: #FFFFFF;
+  padding: 2px;
+  line-height: 5px;
+}
+.checkbox a{
+	text-decoration: underline;
+	color: #FFFFFF; 
+}
+.checkbox a:hover{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #043082; 
+}
+.button-container{
+	margin: 15px 0;
+	display: flex;
+	justify-content: center;
+}
+.button-container button{
+	width: 30%;
+	margin-top: 10px;
+	padding: 10px;
+	display: block;
+	font-size: 16px;
+	border: none;
+	border-radius: 20px;
+	background-color: #043082;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.button-container button:hover{
+	background-color: green;
+}
+@media(max-width: 600px){
+	.Container{
+		min-width: 280px;
+	}
+	.content{
+		max-height: 380px;
+		overflow: auto;
+	}
+	.input-box{
+		margin-bottom: 12px;
+		width: 100%;
+	}
+	.input-box:nth-child(2n){
+		justify-content: space-between;
+	}
+	.content::-webkit-scrollbar{
+		width: (0);
+	}
+}
